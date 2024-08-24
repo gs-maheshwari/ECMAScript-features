@@ -4,15 +4,13 @@ import { ref, watch } from "vue";
 import { featureMap } from "../data";
 import GroupBy from "../demo/GroupBy.vue";
 
-// Define props
 const props = defineProps<{ version: string }>();
 
-let featureName = ref<string | null>(null);
+const featureName = ref<string | null>(null);
 
 watch(
     () => props.version,
     () => {
-        // Clear featureName when version changes
         featureName.value = null;
     }
 );
