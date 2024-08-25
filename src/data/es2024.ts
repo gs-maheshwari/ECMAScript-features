@@ -1,1 +1,1 @@
-export const es2024FeatureList = ['groupBy'];
+export const es2024FeatureList = ['groupBy', 'withResolvers'];

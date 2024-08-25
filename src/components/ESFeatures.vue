@@ -3,6 +3,7 @@ import { ref, watch } from "vue";
 
 import { featureMap } from "../data";
 import GroupBy from "../demo/GroupBy.vue";
+import WithResolvers from "../demo/WithResolvers.vue";
 
 const props = defineProps<{ version: string }>();
 
@@ -43,6 +44,7 @@ const setDemoFeature = (ft: string) => {
         <div id="vertical-tab-with-border-1" role="tabpanel" aria-labelledby="vertical-tab-with-border-item-1">
             <p class="text-gray-500 dark:text-neutral-400">
                 <GroupBy v-if="featureName === 'groupBy'" />
+                <WithResolvers v-if="featureName === 'withResolvers'" />
             </p>
         </div>
     </div>
