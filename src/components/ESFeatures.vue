@@ -4,6 +4,7 @@ import { ref, watch } from "vue";
 import { featureMap } from "../data";
 import GroupBy from "../demo/GroupBy.vue";
 import WithResolvers from "../demo/WithResolvers.vue";
+import ES2023 from "../demo/ES2023.vue";
 
 const props = defineProps<{ version: string }>();
 
@@ -45,6 +46,7 @@ const setDemoFeature = (ft: string) => {
             <p class="text-gray-500 dark:text-neutral-400">
                 <GroupBy v-if="featureName === 'groupBy'" />
                 <WithResolvers v-if="featureName === 'withResolvers'" />
+                <ES2023 v-if="featureMap.get(version)?.includes(featureName)"></ES2023>
             </p>
         </div>
     </div>
