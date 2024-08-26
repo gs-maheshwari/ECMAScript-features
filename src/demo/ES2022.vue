@@ -13,6 +13,11 @@ const foo = {
 };
 const nullProtoObj = Object.create(null);
 nullProtoObj.prop = "exists";
+
+const input = "foo bar foo";
+
+const regex1 = /foo/dg;
+const arr = [...input.matchAll(regex1)];
 </script>
 
 <template>
@@ -30,5 +35,11 @@ nullProtoObj.prop = "exists";
 
         <div>Overwritten hasOwnProperty <code>'bar'</code> = {{ Object.hasOwn(foo, "bar") }}</div>
         <div>nullProtoObj<code>'prop'</code> = {{ Object.hasOwn(nullProtoObj, "prop") }}</div>
+    </div>
+    <div v-if="feature === 'regExp.prototype.hasIndices'">
+        <div>Input = {{ input }}</div>
+        <div>regex1.hasIndices = {{ regex1.hasIndices.toString() }}</div>
+        <div>first indices = {{ arr[0].indices }}</div>
+        <div>second indices = {{ arr[1].indices }}</div>
     </div>
 </template>
