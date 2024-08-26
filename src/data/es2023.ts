@@ -1,2 +1,2 @@
-export const es2023FeatureList = ['findLast', 'findLastIndex', 'symbolsAsWeakMapKeys',
- 'toReversed' , 'toSorted', 'toSpliced', 'with'];
+export const es2023FeatureList = ['array.prototype.findLast', 'array.prototype.findLastIndex', 'symbolsAsWeakMapKeys',
+ 'array.prototype.toReversed' , 'array.prototype.toSorted', 'array.prototype.toSpliced', 'array.prototype.with'];
