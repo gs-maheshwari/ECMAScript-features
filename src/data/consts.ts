@@ -7,3 +7,5 @@ export const inventory = [
     { name: "cherries", type: "fruit", quantity: 5 },
     { name: "fish", type: "meat", quantity: 22 },
 ];
+
+export const numbers = [1, 2, 3, 4, 5];
