@@ -18,6 +18,26 @@ const input = "foo bar foo";
 
 const regex1 = /foo/dg;
 const arr = [...input.matchAll(regex1)];
+
+class Emp {
+    name = "Default";
+    #age = 25;
+    constructor() {}
+    getName() {
+        return this.name;
+    }
+
+    #getAge() {
+        return this.#age;
+    }
+
+    getNameAge() {
+        return `${this.name} is ${this.#getAge()} years old`;
+    }
+}
+
+const emp = new Emp();
+emp.name = "Gouri";
 </script>
 
 <template>
@@ -41,5 +61,11 @@ const arr = [...input.matchAll(regex1)];
         <div>regex1.hasIndices = {{ regex1.hasIndices.toString() }}</div>
         <div>first indices = {{ arr[0].indices }}</div>
         <div>second indices = {{ arr[1].indices }}</div>
+    </div>
+
+    <div v-if="feature === 'class.private'">
+        <div>Emp name = {{ emp.name }}</div>
+        <div>Emp getName = = {{ emp.getName() }}</div>
+        <div>Emp getNameAge = {{ emp.getNameAge() }}</div>
     </div>
 </template>
